@@ -1,2 +1,9 @@
-Joseph Marshall
-Public Repository
+R-L controls
+a/d or left/right - move
+w/up - hide
+s/down - unhide
+space - jump
+q - switch to pink robot
+enter/lshift - fire gun (for miniboss only)
+space - shoot for pink robot
+up/down/w/s - fly for pink robot
