@@ -6,7 +6,7 @@
 
 public class SmallestMultiple {
     public static void main(String[] args) {
-        int sm = 0;
+        int sm = 1;
         boolean smallestMultiple = false;
         while (!smallestMultiple) {
             sm++;
