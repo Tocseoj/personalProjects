@@ -5,16 +5,19 @@
  */
 
 public class SumSquareDifference {
-    private int sumSquared = 0;
-    private int squaredSum = 0;
+    private int sumSquared;
+    private int squaredSum;
+
+    public SumSquareDifference() {
+        this.sumSquared = 0;
+        this.squaredSum = 0;
+    }
 
     public static void main(String[] args) {
         System.out.println(new SumSquareDifference().ssd(100));
     }
 
     public int ssd(int n) {
-        int sumSquared = 0;
-        int squaredSum = 0;
         for (int i = 1; i <= n; i++) {
             squaredSum += Math.pow(i, 2);
             sumSquared += i;
