@@ -5,11 +5,14 @@
  */
 
 public class SumSquareDifference {
+    private int sumSquared = 0;
+    private int squaredSum = 0;
+
     public static void main(String[] args) {
-        System.out.println(ssd(100));
+        System.out.println(new SumSquareDifference().ssd(100));
     }
 
-    public static int ssd(int n) {
+    public int ssd(int n) {
         int sumSquared = 0;
         int squaredSum = 0;
         for (int i = 1; i <= n; i++) {
