@@ -44,6 +44,7 @@ public class LargestPalindromeProduct implements Runnable {
     }
 
     public static void main(String[] args) {
+        long time = System.currentTimeMillis();
         Thread t1 = new Thread(new LargestPalindromeProduct(100, 499));
         Thread t2 = new Thread(new LargestPalindromeProduct(500, 999));
         t1.start();
@@ -57,5 +58,6 @@ public class LargestPalindromeProduct implements Runnable {
         System.out.println(largest);
         System.out.println(n1);
         System.out.println(n2);
+        System.out.println(System.currentTimeMillis() - time);
     }
 }
