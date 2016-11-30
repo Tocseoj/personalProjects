@@ -14,3 +14,5 @@ hs_err_pid*
 workspace.xml
 tasks.xml
 *.iws
+
+.DS_Store
