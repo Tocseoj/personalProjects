@@ -57,9 +57,12 @@ Dijkstra::Dijkstra(std::ifstream *map_file, int nodeStart, int nodeEnd) {
     */
 }
 
-//Dijkstra::~Dijkstra() {
-    
-//}
+Dijkstra::~Dijkstra() {
+    for(auto const& ent : graph.edges) {
+        edge *temp = ent.second;
+        delete temp;
+    }
+}
 
 void Dijkstra::dijkstra() {
     dist[start] = 0;
