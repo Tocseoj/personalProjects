@@ -25,9 +25,9 @@ struct vertex {
         id = vertexID;
         dist = std::numeric_limits<float>::infinity();
     }
-    ~vertex() {
-        incident_edges.clear();
-    }
+    //~vertex() {
+        //incident_edges.clear();
+    //}
     void insert_edge(edge *e) {
         incident_edges.push_back(e);
     }
