@@ -18,7 +18,7 @@ int main(int argc, const char * argv[]) {
     //std::cout << std::numeric_limits<float>::has_infinity << " " << argc << std::endl;
     
     if (argc == 5 || argc == 6) {
-        if (! strcmp(argv[1], "dijkstra")) {
+        if (! std::strcmp(argv[1], "dijkstra")) {
             std::ifstream *mapfile = new std::ifstream(argv[2]);
             if (! mapfile->is_open()) {
                 std::cerr << "File: " << argv[2] << " could not be opened\n";
@@ -40,7 +40,7 @@ int main(int argc, const char * argv[]) {
             }
             return 0;
         }
-        else if (! strcmp(argv[1], "Astar")) {
+        else if (! std::strcmp(argv[1], "Astar")) {
             std::ifstream *mapfile = new std::ifstream(argv[2]);
             if (! mapfile->is_open()) {
                 std::cerr << "File: " << argv[2] << " could not be opened\n";
@@ -67,7 +67,7 @@ int main(int argc, const char * argv[]) {
             }
             return 0;
         }
-        else if (! strcmp(argv[1], "ID")) {
+        else if (! std::strcmp(argv[1], "ID")) {
             std::ifstream *mapfile = new std::ifstream(argv[2]);
             if (! mapfile->is_open()) {
                 std::cerr << "File: " << argv[2] << " could not be opened\n";

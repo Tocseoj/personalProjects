@@ -11,6 +11,7 @@
 
 #include <vector>
 #include <map>
+#include <limits>
 #include <iostream>
 
 struct edge;
