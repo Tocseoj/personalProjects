@@ -53,10 +53,10 @@ struct edge {
         incident_vertices[0] = v[0];
         incident_vertices[1] = v[1];
     }
-    ~edge() {
-        delete incident_vertices[0];
-        delete incident_vertices[1];
-    }
+    //~edge() {
+    //    delete incident_vertices[0];
+    //    delete incident_vertices[1];
+    //}
     void print() {
         std::cout<< "Edge #" << id << ": dist=" << distance << "\n" << "Vertex[0]:" << incident_vertices[0] << " Vertex[1]:" << incident_vertices[1] << std::endl;
     }
