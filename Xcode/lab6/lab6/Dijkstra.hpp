@@ -40,6 +40,7 @@ public:
     float finalDistance;
     std::vector<edge *> finalPrintout;
     Dijkstra(std::ifstream *map_file, int nodeStart, int nodeEnd);
+    std::vector<vertex *> toDelete;
     ~Dijkstra();
     void dijkstra();
     //void decreaseKey(vertex *v, float newDist);

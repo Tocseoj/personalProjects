@@ -28,11 +28,13 @@ Dijkstra::Dijkstra(std::ifstream *map_file, int nodeStart, int nodeEnd) {
             A = graph.vertices.at(nodeID1);
         } catch (std::exception& e) {
             A = new vertex(nodeID1);
+            toDelete.push_back(A);
         }
         try {
             B = graph.vertices.at(nodeID2);
         } catch (std::exception& e) {
             B = new vertex(nodeID2);
+            toDelete.push_back(B);
         }
         vertex *v[] = {A, B};
         edge *e = new edge(edgeID, dist, v);
@@ -60,6 +62,10 @@ Dijkstra::Dijkstra(std::ifstream *map_file, int nodeStart, int nodeEnd) {
 Dijkstra::~Dijkstra() {
     for(auto const& ent : graph.edges) {
         edge *temp = ent.second;
+        delete temp;
+    }
+    for(auto const& ent : toDelete) {
+        vertex *temp = ent;
         delete temp;
     }
 }
