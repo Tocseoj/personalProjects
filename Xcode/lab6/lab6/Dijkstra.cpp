@@ -17,7 +17,6 @@ Dijkstra::Dijkstra(std::ifstream *map_file, int nodeStart, int nodeEnd) {
     while (*map_file >> EOFTest, !map_file->eof()) {
         edgeID = EOFTest;
         *map_file >> nodeID1 >> nodeID2 >> dist;
-        //std::cout << edgeID << " " << nodeID1 << " " << nodeID2 << " " << dist << "\n";
         if (map_file->fail()) {
             std::cerr << "Invalid Input!\n";
             exit(EXIT_FAILURE);
@@ -43,20 +42,9 @@ Dijkstra::Dijkstra(std::ifstream *map_file, int nodeStart, int nodeEnd) {
         graph.edges[edgeID] = e;
         graph.vertices[nodeID1] = A;
         graph.vertices[nodeID2] = B;
-        //graph.print();
-
     }
-    //graph.print();
     map_file->close();
     delete map_file;
-    /*
-    for (int i = 0; i < graph.vertices.size(); i++) {
-        graph.vertices.at(i)->print();
-    }
-    for (int i = 0; i < graph.edges.size(); i++) {
-        graph.edges.at(i)->print();
-    }
-    */
 }
 
 Dijkstra::~Dijkstra() {
@@ -90,15 +78,12 @@ void Dijkstra::dijkstra() {
             }
             prev[ent.first] = nullptr;
         }
-        //heap_entry *e = new heap_entry(dist[ent.first], ent.second);
         min_heap[ent.second] = dist[ent.first];
     }
     bool found = false;
     while (! min_heap.empty()) {
         vertex *entry = min_heap.begin()->first;
         float distance = min_heap.begin()->second;
-        //std::cout<< distance << "\n";
-        //heap_entry *he = min_heap.top();
         min_heap.erase(entry);
         if (entry->id == end) {
             found = true;
@@ -112,14 +97,12 @@ void Dijkstra::dijkstra() {
                 other = entry->incident_edges.at(i)->incident_vertices[0];
             }
             float alt = distance + entry->incident_edges.at(i)->distance;
-            //std::cout << alt << "\n";
             if (alt < dist[other->id]) {
                 dist[other->id] = alt;
                 prev[other->id] = entry;
                 min_heap.erase(other);
                 other->dist = alt;
                 min_heap[other] = alt;
-                //decreaseKey(other, alt);
             }
         }
     }
@@ -133,7 +116,6 @@ void Dijkstra::dijkstra() {
         vertex *a = graph.vertices.at(start);
         vertex *b;
         shortestPath.pop_back();
-        //std::cout << shortestPath.size() << "\n";
         while (shortestPath.size() > 0) {
             b = shortestPath.back();
             shortestPath.pop_back();
@@ -150,26 +132,6 @@ void Dijkstra::dijkstra() {
         exit(0);
     }
 }
-
-/*
-void Dijkstra::decreaseKey(vertex *v, float newDist) {
-    std::vector<heap_entry *> temp;
-    while (! min_heap.empty()) {
-        heap_entry *he = min_heap.top();
-        min_heap.pop();
-        if (he->v->id == v->id) {
-            he->distance = newDist;
-            min_heap.push(he);
-            break;
-        }
-        temp.push_back(he);
-    }
-    while (! temp.empty()) {
-        min_heap.push(temp.back());
-        temp.pop_back();
-    }
-}
- */
 
 void Dijkstra::print() {
     std::cout << "Dist[]\n";

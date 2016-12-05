@@ -16,7 +16,6 @@
 int main(int argc, const char * argv[]) {
     
     std::cout << std::fixed << std::setprecision(6);
-    //std::cout << std::numeric_limits<float>::has_infinity << " " << argc << std::endl;
     
     if (argc == 5 || argc == 6) {
         if (! strcmp(argv[1], "dijkstra")) {
