@@ -10,6 +10,7 @@
 		7C95F9341DF4752400B8CF61 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7C95F9331DF4752400B8CF61 /* main.cpp */; };
 		7CEE29011DF490E600C0A8D3 /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CEE28FF1DF490E600C0A8D3 /* Graph.cpp */; };
 		7CEE29041DF4E40800C0A8D3 /* Dijkstra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CEE29021DF4E40800C0A8D3 /* Dijkstra.cpp */; };
+		7CEE290A1DF5E61400C0A8D3 /* Astar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CEE29081DF5E61400C0A8D3 /* Astar.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,10 @@
 		7CEE29021DF4E40800C0A8D3 /* Dijkstra.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Dijkstra.cpp; sourceTree = "<group>"; };
 		7CEE29031DF4E40800C0A8D3 /* Dijkstra.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Dijkstra.hpp; sourceTree = "<group>"; };
 		7CEE29051DF4F9F000C0A8D3 /* mymap.cedge */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mymap.cedge; sourceTree = "<group>"; };
+		7CEE29071DF5CDDF00C0A8D3 /* SF.cedge */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SF.cedge; sourceTree = "<group>"; };
+		7CEE29081DF5E61400C0A8D3 /* Astar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Astar.cpp; sourceTree = "<group>"; };
+		7CEE29091DF5E61400C0A8D3 /* Astar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Astar.hpp; sourceTree = "<group>"; };
+		7CEE290B1DF5F8F700C0A8D3 /* mynodes.cedge */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mynodes.cedge; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +69,16 @@
 		7C95F9321DF4752400B8CF61 /* lab6 */ = {
 			isa = PBXGroup;
 			children = (
+				7CEE29071DF5CDDF00C0A8D3 /* SF.cedge */,
 				7C95F9331DF4752400B8CF61 /* main.cpp */,
+				7CEE29081DF5E61400C0A8D3 /* Astar.cpp */,
+				7CEE29091DF5E61400C0A8D3 /* Astar.hpp */,
 				7CEE29021DF4E40800C0A8D3 /* Dijkstra.cpp */,
 				7CEE29031DF4E40800C0A8D3 /* Dijkstra.hpp */,
 				7CEE28FF1DF490E600C0A8D3 /* Graph.cpp */,
 				7CEE29001DF490E600C0A8D3 /* Graph.hpp */,
 				7CEE29051DF4F9F000C0A8D3 /* mymap.cedge */,
+				7CEE290B1DF5F8F700C0A8D3 /* mynodes.cedge */,
 			);
 			path = lab6;
 			sourceTree = "<group>";
@@ -132,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CEE29041DF4E40800C0A8D3 /* Dijkstra.cpp in Sources */,
+				7CEE290A1DF5E61400C0A8D3 /* Astar.cpp in Sources */,
 				7CEE29011DF490E600C0A8D3 /* Graph.cpp in Sources */,
 				7C95F9341DF4752400B8CF61 /* main.cpp in Sources */,
 			);

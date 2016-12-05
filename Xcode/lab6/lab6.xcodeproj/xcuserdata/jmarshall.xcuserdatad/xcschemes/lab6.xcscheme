@@ -64,18 +64,30 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "dijkstra"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "Astar"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "ID"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "/Users/jmarshall/GitHub/personalProjects/Xcode/lab6/lab6/mymap.cedge"
+            argument = "/Users/jmarshall/GitHub/personalProjects/Xcode/lab6/lab6/SF.cedge"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "0"
+            argument = "/Users/jmarshall/GitHub/personalProjects/Xcode/lab6/lab6/SF.cnode"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "4"
+            argument = "1"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "5"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
